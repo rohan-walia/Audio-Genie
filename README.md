@@ -1,6 +1,6 @@
 # Audio-Genie
 
-This web application seamlessly converts audio files into text using cutting-edge technology.
+This web application seamlessly converts audio files into text.
 
 ![image](https://github.com/rohan-walia/Audio-Genie/assets/104843997/96d964f6-3e3d-46ba-af0e-cccaebb1a079)
 
