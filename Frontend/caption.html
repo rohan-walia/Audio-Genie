@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="captions.css" />
+    <script defer src="captions.js"></script>
+  </head>
+  <body>
+    <header class="header header__navbar">
+      <div class="navbar flex flex-align-center flex-space-between">
+        <h1 class="navbar__logo">Audio Genie</h1>
+        <ul class="flex navigation-links">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/rohan-walia-b91845190/"
+              target="_blank"
+              class="button hireme-button"
+              >Hire Me!</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="flex flex-col-dir flex-gap-mid">
+        <div class="heading">
+          <h1>Audio to text</h1>
+          <h3 class="subtext">Into whatever language the audio is</h3>
+        </div>
+        <!-- <div class="input flex flex-gap-sm">
+          <label title="Click me to know, how to obtain this key"
+            ><a
+              class="input-label"
+              target="_blank"
+              href="https://platform.openai.com/docs/quickstart/account-setup"
+              >OpenAI key</a
+            ></label
+          >
+          <input name="key" id="key" class="input-field" type="password" />
+        </div> -->
+
+        <button id="generate-captions" class="generate-captions button">
+          Submit
+        </button>
+
+        <button id="upload-another" class="upload-another button hide">
+          Upload Another
+        </button>
+      </div>
+
+      <div class="card">
+        <div class="spinner hide">
+          <div class="react1"></div>
+          <div class="react2"></div>
+          <div class="react3"></div>
+          <div class="react4"></div>
+          <div class="react5"></div>
+        </div>
+        <div class="upload-area flex flex-col-dir flex-center flex-gap-mid">
+          <audio id="audio-player" class="hide" controls>
+            Your browser does not support the audio element.
+          </audio>
+
+          <div
+            class="upload-area-updated flex flex-col-dir flex-gap-mid hide"
+          ></div>
+          <div class="upload-area-childs flex flex-col-dir flex-gap-mid">
+            <div class="upload-area-text">
+              <div>Drag or click to upload</div>
+              <div class="subtext text-sm">
+                (mp3, mp4, mpeg, mpga, m4a, wav, and webm)
+              </div>
+            </div>
+            <div class="upload-area-img">
+              <img
+                src="https://100dayscss.com/codepen/upload.svg"
+                class="upload"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="output-area flex flex-align-center flex-col-dir flex-gap-mid hide"
+          id="outputArea"
+        >
+          <div
+            class="output-area-childs"
+            contenteditable="true"
+            oninput="resizeOutputArea()"
+          ></div>
+        </div>
+
+        <button onclick="copyToClipboard()" id="copyButton" class="button hide">
+          Copy to Clipboard
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
